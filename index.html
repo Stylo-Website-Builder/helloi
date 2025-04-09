@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloi</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dn5occ53n/image/upload/v1738491116/transparent-favicon_dsgzwb.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-slate-900 text-white">
+    <!-- Header -->
+    <header class="fixed w-full z-30 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-2">
+            <div class="flex justify-between items-center">
+                
+                    <h1 class="text-3xl py-2 font-extrabold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                        hfhfhh
+                    </h1>
+                
+                <nav class="hidden md:flex space-x-8">
+                    
+                        <a href="#home" class="text-slate-300 hover:text-purple-400 transition-colors">
+                            Home
+                        </a>
+                    
+                        <a href="#details" class="text-slate-300 hover:text-purple-400 transition-colors">
+                            Details
+                        </a>
+                    
+                        <a href="#testimonials" class="text-slate-300 hover:text-purple-400 transition-colors">
+                            Testimonials
+                        </a>
+                    
+                        <a href="#contact" class="text-slate-300 hover:text-purple-400 transition-colors">
+                            Contact
+                        </a>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8">
+                    <span class="text-purple-400 text-lg font-semibold mb-4 block">Introducing</span>
+                    <h1 class="text-6xl font-bold leading-tight mb-6">lpg Smart Device</h1>
+                    <p class="text-xl text-slate-400 mb-8">Transform your digital experience with cutting-edge technology</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-center hover:opacity-90 transition-opacity">
+                            Buy Now
+                        </a>
+                        <a href="#details" class="px-8 py-4 border border-purple-500 rounded-full text-center hover:bg-purple-500/10 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-3xl opacity-20"></div>
+                        <img src="https://png.pngtree.com/png-vector/20240403/ourmid/pngtree-washing-machine-isolated-on-transparent-background-png-image_12260985.png" alt="Product Image" class="w-full rounded-3xl relative z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section id="details" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <div class="lg:w-1/2">
+                    <div class="sticky top-24">
+                        <!-- Image Slider -->
+                        <div class="relative group">
+                            <div class="relative rounded-2xl bg-slate-900">
+                                <div class="h-96">
+                                    <div id="mainImage" class="h-full">
+                                        <img src="" alt="Product Gallery" class="w-full h-full object-contain">
+                                    </div>
+                                    <!-- Navigation Buttons -->
+                                    <button onclick="previousImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                                    </button>
+                                    <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Thumbnail Navigation -->
+                            <div class="flex justify-center mt-4 gap-2" id="imageDots">
+                                
+                                    <button onclick="goToImage(0)" class="w-2 h-2 rounded-full transition-all bg-purple-500 w-8"></button>
+                                
+                                    <button onclick="goToImage(1)" class="w-2 h-2 rounded-full transition-all bg-slate-600 hover:bg-slate-500"></button>
+                                
+                                    <button onclick="goToImage(2)" class="w-2 h-2 rounded-full transition-all bg-slate-600 hover:bg-slate-500"></button>
+                                
+                                    <button onclick="goToImage(3)" class="w-2 h-2 rounded-full transition-all bg-slate-600 hover:bg-slate-500"></button>
+                                
+                            </div>
+
+                            <!-- Thumbnail Preview -->
+                            <div class="mt-4 grid grid-cols-4 gap-2">
+                                
+                                    <button onclick="goToImage(0)" class="relative rounded-lg overflow-hidden aspect-video ring-2 ring-purple-500">
+                                        <img src="" alt="Thumbnail 1" class="w-full h-full object-cover">
+                                    </button>
+                                
+                                    <button onclick="goToImage(1)" class="relative rounded-lg overflow-hidden aspect-video opacity-60 hover:opacity-100">
+                                        <img src="https://img.freepik.com/premium-photo/washing-machine_1022967-3789.jpg" alt="Thumbnail 2" class="w-full h-full object-cover">
+                                    </button>
+                                
+                                    <button onclick="goToImage(2)" class="relative rounded-lg overflow-hidden aspect-video opacity-60 hover:opacity-100">
+                                        <img src="https://thumbs.dreamstime.com/b/modern-front-loading-washing-machine-transparent-glass-door-modern-front-loading-washing-machine-transparent-326980000.jpg" alt="Thumbnail 3" class="w-full h-full object-cover">
+                                    </button>
+                                
+                                    <button onclick="goToImage(3)" class="relative rounded-lg overflow-hidden aspect-video opacity-60 hover:opacity-100">
+                                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-143936,resizemode-75,msid-115259554/top-trending-products/major-appliances/washing-machine/best-selling-washing-machines-top-picks-for-every-budget-and-need.jpg" alt="Thumbnail 4" class="w-full h-full object-cover">
+                                    </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="space-y-8">
+                        <div class="inline-flex rounded-full bg-purple-500/10 p-1">
+                            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-purple-500 text-white" onclick="switchTab('description')" id="descriptionTab">
+                                Description
+                            </button>
+                            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors text-purple-400 hover:text-purple-300" onclick="switchTab('specifications')" id="specificationsTab">
+                                Specifications
+                            </button>
+                        </div>
+
+                        <div id="descriptionContent" class="space-y-6">
+                            <p class="text-slate-300 text-lg">A revolutionary product designed to enhance your daily life with state-of-the-art features and unparalleled performance.</p>
+                            <div class="grid gap-4">
+                                
+                                    <div class="flex items-center space-x-3 bg-slate-700/50 p-4 rounded-xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><path d="m9 18 6-6-6-6"/></svg>
+                                        Advanced AI Technology
+                                    </div>
+                                
+                                    <div class="flex items-center space-x-3 bg-slate-700/50 p-4 rounded-xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><path d="m9 18 6-6-6-6"/></svg>
+                                        Modern Design
+                                    </div>
+                                
+                                    <div class="flex items-center space-x-3 bg-slate-700/50 p-4 rounded-xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><path d="m9 18 6-6-6-6"/></svg>
+                                        Ultra-Long Battery Life
+                                    </div>
+                                
+                                    <div class="flex items-center space-x-3 bg-slate-700/50 p-4 rounded-xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><path d="m9 18 6-6-6-6"/></svg>
+                                        Intuitive User Interface
+                                    </div>
+                                
+                            </div>
+                        </div>
+
+                        <div id="specificationsContent" class="space-y-4 hidden">
+                            
+                                
+                                
+                                    <div class="flex justify-between items-center bg-slate-700/50 p-4 rounded-xl">
+                                        <span class="text-slate-300">Dimensions</span>
+                                        <span class="text-slate-300">15 x 8 x 5 meter</span>
+                                    </div>
+                                
+                                    <div class="flex justify-between items-center bg-slate-700/50 p-4 rounded-xl">
+                                        <span class="text-slate-300">Weight</span>
+                                        <span class="text-slate-300">28 Kg</span>
+                                    </div>
+                                
+                                    <div class="flex justify-between items-center bg-slate-700/50 p-4 rounded-xl">
+                                        <span class="text-slate-300">Battery</span>
+                                        <span class="text-slate-300">5000 kw</span>
+                                    </div>
+                                
+                                    <div class="flex justify-between items-center bg-slate-700/50 p-4 rounded-xl">
+                                        <span class="text-slate-300">height</span>
+                                        <span class="text-slate-300">010m</span>
+                                    </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Client Testimonials</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                    <div class="bg-slate-800 p-8 rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="https://images.squarespace-cdn.com/content/v1/569591ff0ab3771dba3f1ec6/1453167464043-YWCO1KRYYH7SJNC3D1ZM/image-asset.jpeg" alt="John Doe" class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <h3 class="font-semibold text-lg">John Doe</h3>
+                                <div class="text-yellow-400 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-300">Absolutely amazing product! Exceeded all my expectations.</p>
+                    </div>
+                
+                    <div class="bg-slate-800 p-8 rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMYR0TAT4xCZgg-7cvDs2gH02sMGHAIbFDYQ&amp;s" alt="Jane Smith" class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <h3 class="font-semibold text-lg">Jane Smith</h3>
+                                <div class="text-yellow-400 text-sm">★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-300">Great device with incredible features. Highly recommended.</p>
+                    </div>
+                
+                    <div class="bg-slate-800 p-8 rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="" alt="Mike Johnson" class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <h3 class="font-semibold text-lg">Mike Johnson</h3>
+                                <div class="text-yellow-400 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-300">Revolutionary technology that changes the way I work and live.</p>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-800">
+        <div id="popupMessage" class="fixed top-24 right-4 bg-green-500 text-white px-6 py-3 rounded-lg hidden transition-all duration-300 transform scale-90">
+            <span id="popupText"></span>
+        </div>
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-12 shadow-2xl border border-slate-700">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                    Get in Touch with Our Team
+                </h2>
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Name" 
+                                class="w-full px-6 py-4 bg-slate-900/50 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-slate-500 text-white">
+                            <p class="text-red-500 text-sm mt-1 hidden" id="nameError"></p>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="Email" 
+                                class="w-full px-6 py-4 bg-slate-900/50 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-slate-500 text-white">
+                            <p class="text-red-500 text-sm mt-1 hidden" id="emailError"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" name="contactNo" id="contactNo" placeholder="Contact No" 
+                            class="w-full px-6 py-4 bg-slate-900/50 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-slate-500 text-white">
+                        <p class="text-red-500 text-sm mt-1 hidden" id="contactError"></p>
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" placeholder="Your Message" rows="4"
+                            class="w-full px-6 py-4 bg-slate-900/50 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-slate-500 text-white resize-none"></textarea>
+                        <p class="text-red-500 text-sm mt-1 hidden" id="messageError"></p>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl text-white font-semibold hover:opacity-90 transition-opacity">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-slate-500">© 2024 TechPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Image Gallery
+        let currentImageIndex = 0;
+        const gallery = [null,"https://img.freepik.com/premium-photo/washing-machine_1022967-3789.jpg","https://thumbs.dreamstime.com/b/modern-front-loading-washing-machine-transparent-glass-door-modern-front-loading-washing-machine-transparent-326980000.jpg","https://img.etimg.com/thumb/width-1200,height-900,imgsize-143936,resizemode-75,msid-115259554/top-trending-products/major-appliances/washing-machine/best-selling-washing-machines-top-picks-for-every-budget-and-need.jpg"];
+        
+        function updateImage(index) {
+            const mainImage = document.getElementById('mainImage').querySelector('img');
+            mainImage.src = gallery[index];
+            
+            // Update dots
+            document.querySelectorAll('#imageDots button').forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('bg-purple-500', 'w-8');
+                    dot.classList.remove('bg-slate-600');
+                } else {
+                    dot.classList.remove('bg-purple-500', 'w-8');
+                    dot.classList.add('bg-slate-600');
+                }
+            });
+            
+            // Update thumbnails
+            document.querySelectorAll('.grid button').forEach((thumb, i) => {
+                if (i === index) {
+                    thumb.classList.add('ring-2', 'ring-purple-500');
+                    thumb.classList.remove('opacity-60');
+                } else {
+                    thumb.classList.remove('ring-2', 'ring-purple-500');
+                    thumb.classList.add('opacity-60');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % gallery.length;
+            updateImage(currentImageIndex);
+        }
+
+        function previousImage() {
+            currentImageIndex = currentImageIndex === 0 ? gallery.length - 1 : currentImageIndex - 1;
+            updateImage(currentImageIndex);
+        }
+
+        function goToImage(index) {
+            currentImageIndex = index;
+            updateImage(currentImageIndex);
+        }
+
+        // Tab Switching
+        function switchTab(tabName) {
+            const descriptionTab = document.getElementById('descriptionTab');
+            const specificationsTab = document.getElementById('specificationsTab');
+            const descriptionContent = document.getElementById('descriptionContent');
+            const specificationsContent = document.getElementById('specificationsContent');
+
+            if (tabName === 'description') {
+                descriptionTab.classList.add('bg-purple-500', 'text-white');
+                descriptionTab.classList.remove('text-purple-400');
+                specificationsTab.classList.remove('bg-purple-500', 'text-white');
+                specificationsTab.classList.add('text-purple-400');
+                
+                descriptionContent.classList.remove('hidden');
+                specificationsContent.classList.add('hidden');
+            } else {
+                specificationsTab.classList.add('bg-purple-500', 'text-white');
+                specificationsTab.classList.remove('text-purple-400');
+                descriptionTab.classList.remove('bg-purple-500', 'text-white');
+                descriptionTab.classList.add('text-purple-400');
+                
+                specificationsContent.classList.remove('hidden');
+                descriptionContent.classList.add('hidden');
+            }
+        }
+
+        // Form Handling
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const popupMessage = document.getElementById("popupMessage");
+            const popupText = document.getElementById("popupText");
+            const contactNo = document.getElementById("contactNo");
+            const submitButton = form.querySelector("button[type='submit']");
+
+            function showPopup(message, type = "success") {
+                popupText.textContent = message;
+                popupMessage.classList.remove("hidden", "bg-green-500", "bg-red-500", "scale-90");
+                popupMessage.classList.add(type === "error" ? "bg-red-500" : "bg-green-500", "scale-100");
+
+                setTimeout(() => {
+                    popupMessage.classList.add("hidden", "scale-90");
+                }, 3000);
+            }
+
+            function validateForm() {
+                let isValid = true;
+
+                const name = document.getElementById("name");
+                const email = document.getElementById("email");
+                const message = document.getElementById("message");
+
+                const nameError = document.getElementById("nameError");
+                const emailError = document.getElementById("emailError");
+                const contactError = document.getElementById("contactError");
+                const messageError = document.getElementById("messageError");
+
+                // Reset errors
+                [nameError, emailError, contactError, messageError].forEach(error => error.classList.add("hidden"));
+
+                if (name.value.trim() === "") {
+                    nameError.textContent = "Name is required.";
+                    nameError.classList.remove("hidden");
+                    isValid = false;
+                }
+
+                if (email.value.trim() === "") {
+                    emailError.textContent = "Email is required.";
+                    emailError.classList.remove("hidden");
+                    isValid = false;
+                } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+                    emailError.textContent = "Enter a valid email.";
+                    emailError.classList.remove("hidden");
+                    isValid = false;
+                }
+
+                if (contactNo.value.trim() === "") {
+                    contactError.textContent = "Mobile number is required.";
+                    contactError.classList.remove("hidden");
+                    isValid = false;
+                } else if (!/^\d{10}$/.test(contactNo.value)) {
+                    contactError.textContent = "Mobile number must be exactly 10 digits.";
+                    contactError.classList.remove("hidden");
+                    isValid = false;
+                }
+
+                if (message.value.trim() === "") {
+                    messageError.textContent = "Message is required.";
+                    messageError.classList.remove("hidden");
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                if (!validateForm()) {
+                    return;
+                }
+
+                submitButton.textContent = "Sending...";
+                submitButton.disabled = true;
+
+                const formData = new FormData(form);
+                const jsonObject = {};
+                formData.forEach((value, key) => {
+                    jsonObject[key] = value;
+                });
+
+                const url = "https://stylo-website-builder.onrender.com/api/v1/websites/send-email/productShowcase/67f617a3a4bceececdedeaea";
+
+                try {
+                    const response = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(jsonObject),
+                    });
+
+                    if (response.ok) {
+                        showPopup("Message sent successfully!", "success");
+                        form.reset();
+                    } else {
+                        showPopup("Failed to send message. Try again.", "error");
+                    }
+                } catch (error) {
+                    showPopup("Error occurred. Please try again.", "error");
+                } finally {
+                    submitButton.textContent = "Send Message";
+                    submitButton.disabled = false;
+                }
+            });
+
+            // Prevent non-numeric input and limit to 10 digits
+            contactNo.addEventListener("input", function () {
+                this.value = this.value.replace(/\D/g, "").slice(0, 10);
+            });
+
+            // Clear error messages on input
+            document.querySelectorAll("input, textarea").forEach(input => {
+                input.addEventListener("input", function () {
+                    const errorElement = this.nextElementSibling;
+                    if (errorElement) {
+                        errorElement.classList.add("hidden");
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').slice(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
